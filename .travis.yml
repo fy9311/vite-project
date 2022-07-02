@@ -7,3 +7,17 @@ before_install:
 
 script:
   - docker run web-app npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  region: 'us-west-2'
+  app: 'webapp'
+  env: 'Webapp-env'
+  access_key_id:
+    secure: $access_key_id
+  secret_access_key:
+    secure: $secret_access_key
+  bucket_name: 'telasticbeanstalk-us-west-2-421657422286'
+  bucket_path: 'webapp'
+  on:
+    branch: master
