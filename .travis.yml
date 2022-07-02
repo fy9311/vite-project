@@ -15,7 +15,7 @@ deploy:
   env: 'Webapp-env'
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
-  bucket_name: 'telasticbeanstalk-us-west-2-421657422286'
+  bucket_name: 'elasticbeanstalk-us-west-2-421657422286'
   bucket_path: 'webapp'
   on:
     branch: master
